@@ -1,0 +1,16 @@
+{% extends 'portfolio_app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="create-article">
+
+        <h2 class="reg">Create an Awesome New Article</h2>
+        <form class="site-form" action="{% url 'portfolio_app:create' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create">
+        </form>
+
+    </div>
+<script src="{% static 'portfolio_app/js/slug.js' %}"></script>
+{% endblock %}

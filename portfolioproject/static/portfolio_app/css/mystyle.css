@@ -1,0 +1,119 @@
+.nav-item a ::before{
+  color: gold
+}
+
+#logoutb button{
+  background: none;
+  cursor: pointer;
+  color:gold;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 600;  
+}
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.articles{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding: 20px;
+}
+
+.article img{
+  padding: 100px;
+}
+
+
+.article-blog{
+  text-align: center;
+  padding: 10px;
+  border: 1px solid hsl(212, 100%, 50%);
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.article-blog h2{
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.article-blog .author{
+  padding: 10px;
+  background:  #0078ff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #0f121f;
+}
+
+.article-detail{
+  padding-top: 100px;
+}
+
+.article-detail .article{
+  padding: 0;
+}
+
+.article-detail .article img{
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-detail .article h2{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 2em;
+}
+
+.article-detail .article p{
+	text-align: justify;
+	border-style: solid;
+	border-color: black;
+	border-width: 10px;
+}
+
+.reg{padding-top: 150px;
+  text-align: center;
+  color:  black;
+}
+
+
+.site-form{
+  margin-top: 60px;
+  border: 1px solid  black;
+  padding: 20px; 
+}
+
+.site-form input, .site-form textarea{
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+
+.errorlist{
+  padding: 0;
+}
+.errorlist li{
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid red;
+  color: red;
+  margin: 10px 0;
+}
+
+.site-form input[type="submit"]{
+  background: #0078ff;
+  border: 0;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 4px;
+  margin: 10px 0;
+}

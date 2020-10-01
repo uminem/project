@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+
+{% endblock %}
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Isika Ume</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{% static 'portfolio_app/images/favicon.png' %}" rel="icon">
+    <link href="{% static 'portfolio_app/images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'portfolio_app/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'portfolio_app/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio_app/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio_app/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio_app/css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio_app/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'portfolio_app/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio_app/css/mystyle.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+<!--/ Nav Star /-->
+<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll" href="{% url 'index' %}"><em>Isika Ume</em></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+            aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll active" href="{% url 'portfolio_app:index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="#service">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="{% url 'accounts:register'%}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="{% url 'accounts:login' %}">Login</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'portfolio_app:create' %}" class="nav-link js-scroll" id="highlight">Create</a>
+                </li>
+                <li class="nav-item">
+                    <form id="logoutb" class="nav-link js-scroll" action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+                
+                {% endif %}
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--/ Nav End /-->
+
+
+
+<body>
+    <div class="">
+
+        
+            {% block content %}
+            
+            {% endblock %}
+    </div>
+</body>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                        <p class="copyright">&copy; Copyright <strong>DevFolio</strong>. All Rights Reserved</p>
+                        <div class="credits">
+                            <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                -->
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--/ Section Contact-footer End /-->
+
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div id="preloader"></div>
+
+<!-- JavaScript Libraries -->
+<script src="{% static 'portfolio_app/js/jquery.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/popper.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/easing.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/jquery.counterup.js' %}"></script>
+<script src="{% static 'portfolio_app/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/lightbox.min.js' %}"></script>
+<script src="{% static 'portfolio_app/js/typed.min.js' %}"></script>
+<!-- Contact Form JavaScript File -->
+<script src="{% static 'portfolio_app/js/contactform.js' %}"></script> -->
+
+<!-- Template Main Javascript File -->
+<script src="{% static 'portfolio_app/js/main.js' %}"></script>
+
+</body>
+
+</html>

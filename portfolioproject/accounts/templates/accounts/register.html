@@ -1,0 +1,14 @@
+{% extends 'portfolio_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container">
+    <h1 class="reg">Register</h1>
+    <form class="site-form" action="/accounts/register/" method="post">
+        {% csrf_token%}
+        {{ form }}
+        <input type="submit" value="Register">
+    </form>
+</section>
+
+{% endblock %}
